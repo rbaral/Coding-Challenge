@@ -1,0 +1,165 @@
+/**
+Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, 
+and there exists one unique longest palindromic substring.
+*/
+/*
+Test cases:
+"abadd"
+
+"civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"
+*/
+public class Solution {
+    public String longestPalindrome(String s) {
+        int repeatIndex=0;
+        String longestPalindrome="", tempPal="";
+        int maxLength=0, tempMaxLength=0;
+        if(s.isEmpty())
+            return "";
+        else if(s.length()==1)
+            return s;
+        else if(s.length()==2){
+            if(s.charAt(0)==s.charAt(1))
+                return s;
+            else
+                return s.substring(0,1);
+        }
+        else{
+           for(int i=0;i<s.length();i++){
+            //check if the palindrom starts and ends with character at s[i]
+            repeatIndex = s.substring(i+1).indexOf(s.charAt(i));
+            if(repeatIndex<0){//no palindrome that starts with this character
+                if(maxLength<1){//for the non repeating word the single word is the palindrome
+                    longestPalindrome = s.substring(i,i+1);
+                    maxLength = 1;
+                }
+            }else{
+                System.out.println("for string:"+s+" finding substring in the range:"+i+" "+(repeatIndex+2));
+                tempPal = s.substring(i,repeatIndex+2); //this will be palindrome if its substring with the first and last char removed is also a palindrome
+                //check if we already found one with equal or greater length than this
+                if(maxLength<tempPal.length()){
+                    longestPalindrome = new String(tempPal.toCharArray());
+                    do{
+                        System.out.println("candidate pal:"+tempPal);
+                       if(tempPal.length()<=1){
+                           maxLength = longestPalindrome.length();
+                       }
+                       else if(tempPal.length()==2){//case of remaining string with 2 chars
+                           if(tempPal.charAt(0)==tempPal.charAt(1)){
+                              maxLength = longestPalindrome.length();
+                              tempPal="";
+                           }else{
+                               break;
+                           }
+                       }
+                       else if(tempPal.charAt(0)==tempPal.charAt(tempPal.length()-1)){//check if the chars at two end match
+                           //System.out.println("operating on substring:"+tempPal);
+                           tempPal = tempPal.substring(1,tempPal.length()-1);
+                           //System.out.println("next substring:"+tempPal);
+                       }else if(tempPal.charAt(0)==tempPal.charAt(tempPal.length()-2)){//try removing the last char and see if the new substring has two ends matching char
+                           tempPal = tempPal.substring(0,tempPal.length()-1);
+                           longestPalindrome = new String(tempPal.toCharArray());//this is the candidate palindrome
+                           //System.out.println("operating on substring:"+tempPal);
+                           if(maxLength>tempPal.length())
+                                break;
+                            else
+                                tempPal = tempPal.substring(1,tempPal.length()-1);//the substring palindrome
+                           
+                       }
+                       else{//this is not a palindrome
+                        //System.out.println("not palindrome:"+tempPal);
+                           break;
+                       } 
+                    }while(tempPal.length()>1);
+                    //if the remaining substring is of size 1, then we have found one
+                       if(tempPal.length()<=1){
+                           maxLength = longestPalindrome.length();
+                       }
+                }
+                
+            }
+        }
+        if(maxLength==1)//return the first char as the first found palindrome
+            longestPalindrome=s.substring(0,1); 
+        //System.out.println("max length is:"+maxLength+" for pal: "+ longestPalindrome);
+        return longestPalindrome; 
+        }
+    }
+}
+
+//another sol
+
+public class Solution {
+    public String longestPalindrome(String s) {
+        //we use the concept of a PDA
+        List<Integer> repeatIndices = new ArrayList<Integer>();
+        String tempString="", pal="", tempPal="";
+        int repeatIndex=0;
+        boolean proceed=false;
+        for(int i=0;i<s.length();i++){
+            //find the repititions of the ith char in string s
+            repeatIndices.clear();
+            proceed =false;
+            repeatIndex =i;
+            do{
+                repeatIndices.add(repeatIndex);
+                if((repeatIndex+1)<s.length()){
+                    tempString = s.substring(repeatIndex+1);
+                    repeatIndex = tempString.indexOf(s.charAt(i));  
+                }
+                
+            }while(repeatIndex>=0);
+            //now for every pair of the repeated indices, check if the included string is a palindrome
+            for(int k=0;k<repeatIndices.size();k++){
+                for(int j= k+1;j<repeatIndices.size();j++){
+                    if((j-k)> tempPal.length()){
+                        proceed = true;
+                    }
+                }
+            }
+            if(proceed)
+                tempPal = findPalStartingWith(repeatIndices,s);
+            
+        }
+        
+        return pal;
+}
+
+    public String findPalStartingWith(List<Integer> indices, String s){
+        String pal="";
+        int mid=0,index=0;
+        boolean isPal = false;
+        String palString="";
+      for(int i=0;i<indices.size();i++){
+          for(int j=i+1;i<indices.size();j++){
+              pal = s.substring(indices.get(i),indices.get(j));
+              System.out.println("checking if:"+pal);
+              mid = pal.length()/2;//we push this many strings to stack and check if the remaining has same pattern
+              Stack stack = new Stack();
+              index =mid;
+              do{
+                  stack.push(pal.charAt(index));
+                  index++;
+              }while(index<mid);
+              //stack.addAll(pal.substring(0,mid+1).toCharArray());
+              //if the string was of odd length, ignore the middle char
+              if(mid*2<pal.length()){
+                 index++; 
+              }
+              isPal = true;
+              do{
+                  char c = (char)stack.pop();
+                  if(c!=pal.charAt(index)){//not a palindrome
+                      isPal = false;
+                      break;
+                  }
+                  index++;
+              }while(index<pal.length());
+              if(isPal && palString.length()<pal.length()){
+                 palString = new String(pal.toCharArray()); 
+              }
+          }
+          
+      } 
+      return palString;
+    }
+}
