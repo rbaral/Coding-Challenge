@@ -134,11 +134,6 @@ public class AdditiveNumbers {
 		testCases.add(new AdditiveNumberTestCase("211738", true));
 		testCases.add(new AdditiveNumberTestCase("111122335588143", true));
 		testCases.add(new AdditiveNumberTestCase("123", true));
-		
-		
-		
-		
-		
 		boolean result;
 		for(AdditiveNumberTestCase testCase:testCases){
 			result = isAdditiveNumber(testCase.getNum());
@@ -154,5 +149,4 @@ public class AdditiveNumbers {
 			System.err.println(res);
 		}
 	}
-
 }
