@@ -8,8 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.sun.org.apache.bcel.internal.generic.ISUB;
-
 /**
  * Determine whether an integer is a palindrome. Do this without extra space.
 
