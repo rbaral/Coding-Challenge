@@ -1,5 +1,15 @@
+/**
+ * Given an integer, convert it to a roman numeral.
+
+Input is guaranteed to be within the range from 1 to 3999.
+ */
 package com.alg.leetup.others;
 
+/**
+ * 
+ * @author rbaral
+ *
+ */
 public class InttoRoman {
 	public static void main(String args[]){
 		System.out.println(intToRoman(1010));
