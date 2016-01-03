@@ -110,25 +110,25 @@ public class Coinchange {
 			return -1;
 		}else{
 			//an array to hold the minimum coins required for the indexed amount,i.e. we store temp[amount] = min # of coins
-			int temp[] = new int[amount+1];
-	        temp[0] = 0;//no change possible for amount 0
+			int minChanges[] = new int[amount+1];
+			minChanges[0] = 0;//no change possible for amount 0
 	        for(int i=1; i <= amount; i++){
-	            temp[i] = Integer.MAX_VALUE -1;//let's assume we need arbitrarily large no of coins
+	        	minChanges[i] = Integer.MAX_VALUE -1;//let's assume we need arbitrarily large no of coins
 	        }
 	        int prev=0, curr =0;
 	        for(int i=0; i < coins.length; i++){
 	            for(int j=1; j <= amount; j++){
 	            	 if(j >= coins[i]){//if amount is at least the value of the coin, then we can find a change
  	                    //be careful here. Max_val + 1 can result in very small negative number.
- 	                	prev = temp[j-coins[i]] +1;
- 	                	curr = temp[j];
- 	                    temp[j] = Math.min(curr, prev);
+ 	                	prev = minChanges[j-coins[i]] +1;
+ 	                	curr = minChanges[j];
+ 	                	minChanges[j] = Math.min(curr, prev);
  	                }	
 	            }
 	        }
-	        if(temp[amount]==(Integer.MAX_VALUE-1))//we didn't set this element, so that means we didn't find the solution
+	        if(minChanges[amount]==(Integer.MAX_VALUE-1))//we didn't set this element, so that means we didn't find the solution
 	        	return -1;
-	        return temp[amount];
+	        return minChanges[amount];
 		}
 	}
 	
