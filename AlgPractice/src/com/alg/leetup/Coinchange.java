@@ -133,7 +133,12 @@ public class Coinchange {
 	}
 	
 	
-	
+	/**
+	 * ref:https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/CoinChangingMinimumCoin.java
+	 * @param arr
+	 * @param total
+	 * @return
+	 */
 	public static int minimumCoinBottomUp(int arr[], int total){
         int temp[] = new int[total+1];
         temp[0] = 0;
