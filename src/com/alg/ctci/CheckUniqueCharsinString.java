@@ -2,7 +2,7 @@
  * Implement an algorithm to determine if a string has all unique characters. What
 if you cannot use additional data structures?
  */
-package com.alg.basics.cracking;
+package com.alg.ctci;
 
 /**
  * @author rbaral
@@ -14,7 +14,7 @@ public class CheckUniqueCharsinString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String s = "Abcde12a";
+		String s = "Abcde12A";
 		System.out.println(hasUniqueChars1(s));
 		System.out.println(hasUniqueChars2(s));
 
