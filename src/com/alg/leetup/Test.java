@@ -10,8 +10,10 @@ import java.util.List;
 public class Test {
 
 	public static void main(String[] args) {
-		int coinChange[][] = new int[2][];
-		System.out.println(coinChange[0][0]);
+		//int coinChange[][] = new int[2][];
+		//System.out.println(coinChange[0][0]);
+                
+                System.out.println(0%3);
 	}
 	
 	public static int[] cloneArray(int[] nums,int index){

@@ -15,7 +15,7 @@ public class DivideTwoIntegers {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int dividend =10, divisor =3;
+		int dividend =-100, divisor = 3;
 		System.out.println(divide(dividend, divisor));
 
 	}

@@ -19,7 +19,7 @@ public class FirstMissingPositiveIntegerInAnArray {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int nums[] = new int[]{1,2,0};
+		int nums[] = new int[]{-1,-2,0};
 		System.out.println(firstMissingPositive(nums));
 
 	}
@@ -50,7 +50,7 @@ public class FirstMissingPositiveIntegerInAnArray {
 			 * check if : 
 			 * a) the element is greater than 0 (we are not counting 0 as positive integer) 
 			 * b) the elements are in their bucket order
-			 * c) put the element with value i to the position i – 1
+			 * c) put the element with value i to the position i ï¿½ 1
 			 * and then maintain the order of the elements
 			 */
 			if (nums[i] > 0 && nums[i] != i + 1 && nums[i] <= nums.length && nums[nums[i] - 1] != nums[i]) {

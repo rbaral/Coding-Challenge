@@ -41,7 +41,9 @@ public class RemoveDuplicatesFromSortedArray {
 			if(nums.length==1) return 1;
 	        int j = 0; //a pointer to keep track of previous element and the number of unique elements found so far
 	        for(int i=1;i<nums.length; i++){
-	            if(nums[i] > nums[j]){//compare if the current element and the previous are unique, if so, then add the unique element to the proper position
+	            if(nums[i] > nums[j]){
+                        //compare if the current element and the previous are unique, 
+                        //if so, then add the unique element to the proper position
 	                nums[++j] = nums[i];
 	            }
 	        }

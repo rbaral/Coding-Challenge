@@ -1,7 +1,8 @@
 /**
  * Additive number is a string whose digits can form additive sequence.
 
-A valid additive sequence should contain at least three numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.
+A valid additive sequence should contain at least three numbers. 
+* Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.
 
 For example:
 "112358" is an additive number because the digits can form an additive sequence: 1, 1, 2, 3, 5, 8.
@@ -80,10 +81,10 @@ public class AdditiveNumbers {
 	 */
 	public static boolean search(String a, String b, String c){
 		String d = String.valueOf(Long.parseLong(a) + Long.parseLong(b));
-		if(Long.parseLong(d)>Integer.MAX_VALUE)
-			return true;
+		//if(Long.parseLong(d)>Integer.MAX_VALUE)
+		//	return true;
 		if(!isValid(d) || !c.startsWith(d))
-            return false;
+                    return false;
         if(c.equals(d))
             return true;
         //if the remaining string is exhausted before we found the additive numbers
