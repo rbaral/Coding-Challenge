@@ -5,7 +5,7 @@ For example, given n = 3, a solution set is:
 
 "((()))", "(()())", "(())()", "()(())", "()()()"
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

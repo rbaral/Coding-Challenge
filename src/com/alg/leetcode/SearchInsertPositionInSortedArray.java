@@ -9,7 +9,7 @@ Here are few examples.
 [1,3,5,6], 7 --> 4
 [1,3,5,6], 0 --> 0
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.Arrays;
 

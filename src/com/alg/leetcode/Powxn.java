@@ -1,7 +1,7 @@
 /**
  * Implement pow(x, n).
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

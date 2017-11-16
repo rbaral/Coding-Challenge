@@ -13,7 +13,7 @@ A solution set is:
 [7] 
 [2, 2, 3] 
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

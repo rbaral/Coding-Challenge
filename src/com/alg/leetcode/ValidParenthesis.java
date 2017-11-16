@@ -3,7 +3,7 @@
 
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

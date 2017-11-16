@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  *In the computer world, use restricted resource you have to generate maximum benefit is what we always want to pursue.

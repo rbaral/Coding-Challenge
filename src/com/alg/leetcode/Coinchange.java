@@ -13,7 +13,7 @@ Note:
 You may assume that you have an infinite number of each kind of coin.
  
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

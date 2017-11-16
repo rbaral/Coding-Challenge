@@ -1,4 +1,4 @@
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

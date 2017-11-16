@@ -5,7 +5,7 @@
 
     The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

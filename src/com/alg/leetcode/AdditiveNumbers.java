@@ -18,7 +18,7 @@ Follow up:
 How would you handle overflow for very large input integers?
  */
 //ref:http://bookshadow.com/weblog/2015/11/18/leetcode-additive-number/
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;

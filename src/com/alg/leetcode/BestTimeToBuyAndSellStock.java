@@ -3,7 +3,7 @@
  * If you were only permitted to complete at most one transaction (ie, buy one and sell one 
  * share of the stock), design an algorithm to find the maximum profit.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

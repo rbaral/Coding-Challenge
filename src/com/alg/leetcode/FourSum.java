@@ -11,7 +11,7 @@ The solution set must not contain duplicate quadruplets.
     (-2, -1, 1, 2)
     (-2,  0, 0, 2)
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

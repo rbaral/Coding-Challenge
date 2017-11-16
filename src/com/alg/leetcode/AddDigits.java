@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  *Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.

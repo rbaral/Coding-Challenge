@@ -3,7 +3,7 @@
 
 Input is guaranteed to be within the range from 1 to 3999.
  */
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 
 /**
  * 

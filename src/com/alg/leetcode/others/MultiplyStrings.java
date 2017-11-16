@@ -3,7 +3,7 @@
 
 Note: The numbers can be arbitrarily large and are non-negative.
  */
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 
 /**
  * @author rbaral

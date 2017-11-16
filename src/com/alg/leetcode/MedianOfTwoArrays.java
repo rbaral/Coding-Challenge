@@ -1,4 +1,4 @@
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.Arrays;
 /**

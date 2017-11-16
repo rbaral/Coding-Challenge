@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  * Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.

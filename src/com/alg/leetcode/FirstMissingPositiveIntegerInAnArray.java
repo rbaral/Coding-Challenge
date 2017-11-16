@@ -7,7 +7,7 @@ and [3,4,-1,1] return 2.
 
 Your algorithm should run in O(n) time and uses constant space.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  * @author rbaral

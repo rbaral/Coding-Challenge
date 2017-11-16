@@ -5,7 +5,7 @@
 
 Note: You may not slant the container.
  */
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 /**
  * ref:http://rafal.io/posts/leetcode-11-container-with-most-water.html
  * @author rbaral

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  *Given two binary trees, write a function to check if they are equal or not.

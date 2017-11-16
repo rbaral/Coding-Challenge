@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  * Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.

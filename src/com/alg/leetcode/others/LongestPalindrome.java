@@ -1,4 +1,4 @@
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 
 import java.util.Date;
 import java.util.HashMap;

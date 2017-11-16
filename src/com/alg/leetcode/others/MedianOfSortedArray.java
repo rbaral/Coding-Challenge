@@ -4,7 +4,7 @@ Find the median of the two sorted arrays.
 The overall run time complexity should be O(log (m+n)).
 */
 
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 
 import java.util.Arrays;
 

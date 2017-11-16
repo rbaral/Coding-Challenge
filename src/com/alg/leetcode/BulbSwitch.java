@@ -16,7 +16,7 @@ After third round, the three bulbs are [on, off, off].
 So you should return 1, because there is only one bulb is on.
 
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.Date;
 

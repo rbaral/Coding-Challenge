@@ -3,7 +3,7 @@
 
 If it is overflow, return MAX_INT.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  * @author rbaral

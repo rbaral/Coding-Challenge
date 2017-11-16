@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetup;
+package com.alg.leetcode;
 
 /**
  * Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.

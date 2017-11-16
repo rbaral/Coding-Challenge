@@ -1,4 +1,4 @@
-package com.alg.leetup.others;
+package com.alg.leetcode.others;
 
 import java.math.BigInteger;
 import java.util.HashMap;

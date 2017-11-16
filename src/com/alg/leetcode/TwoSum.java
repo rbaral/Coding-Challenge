@@ -9,7 +9,7 @@ Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2
  */
 
-package com.alg.leetup;
+package com.alg.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
