@@ -5,8 +5,8 @@
  */
 package com.alg.ccup;
 
-import com.ds.BinaryNode;
-import com.ds.BinaryTree;
+import com.ds.binarytree.BinaryNode;
+import com.ds.binarytree.BinaryTree;
 
 /**
  *Given a specific type of DAT that forms a pyramid

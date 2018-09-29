@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetcode;
+package com.alg.leetup;
 
 /**
  * Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, 
@@ -32,7 +32,7 @@ Only three moves are needed (remember each move increments two elements):
 * *************************************
 * Ref:http://codereview.stackexchange.com/questions/148442/finding-the-minimum-number-of-moves-to-achieve-equal-array-elements
 
-Instead of
+Instead of saying
 
 Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, 
 where a move is incrementing n - 1 elements by 1.

@@ -8,8 +8,6 @@ Note: In the string, each word is separated by single space and there will not b
  */
 package com.alg.leetcode;
 
-import java.util.Arrays;
-
 /**
  *
  * @author rbaral
@@ -51,9 +49,29 @@ public class ReverseWordsInStringIII {
         return sb.toString().trim();
     }
     
+    public static String reverseWordsII(String param){
+        StringBuffer rev = new StringBuffer();
+        StringBuffer word = new StringBuffer();
+        for(int i=param.length()-1; i>=0;i--){
+            if(param.charAt(i)==' '){//word terminator
+                rev.insert(0, word.toString());
+                rev.insert(0, ' ');
+                //clear word
+                word.setLength(0);
+            }
+            else
+                word.append(param.charAt(i));
+            //for the first word
+            if(i==0){
+                rev.insert(0, word.toString());
+                rev.insert(0, ' ');
+            }
+        }
+        return rev.toString();
+    }
     public static void main(String args[]){
         String input= "Let's take LeetCode contest";
-        String output = reverseWords(input);
+        String output = reverseWordsII(input);
         System.out.println(output);
     }
 }

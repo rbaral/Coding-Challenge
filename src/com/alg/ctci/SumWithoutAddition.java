@@ -25,7 +25,13 @@ public class SumWithoutAddition {
         }
     }
     
+    static int sub(int n1, int n2){
+        // Add two's complement and return.
+        return add(n1, add(~n2, 1));
+    }
+    
     public static void main(String args[]){
         System.out.println("sum:"+add(5,7));
+        System.out.println("diff:"+sub(15,17));
     }
 }

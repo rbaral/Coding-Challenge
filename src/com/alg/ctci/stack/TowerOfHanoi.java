@@ -6,22 +6,25 @@
 package com.alg.ctci.stack;
 
 /**
- *Implements Tower of Hanoi problem using Stack
+ * Implements Tower of Hanoi problem using Stack
+ *
  * @author rbaral
  */
 public class TowerOfHanoi {
-    
-	public static void main(String args[]){
-		int n = 3;
-		Tower[] towers = new Tower[n];
-		for(int i=0;i<3;i++){
-			towers[i] = new Tower(i);
-		}
-		//add elements to the first tower, make sure the order of item maintains the order for TOH problem
-		for(int i= n-1; i>=0;i--){
-			towers[0].add(i);
-		}
-		//now start moving
-		towers[0].moveItems(n, towers[1], towers[2]);
-	}
+
+    public static void main(String args[]) {
+        int n = 3;
+        Tower[] towers = new Tower[n];
+        for (int i = 0; i < n; i++) {
+            towers[i] = new Tower(i);
+        }
+        //add elements to the first tower, make sure the order of item maintains the order for TOH problem
+        int disk = 3;
+        for (int i = disk - 1; i >= 0; i--) {
+            towers[0].add(i);
+        }
+        //now start moving
+        towers[0].moveItems(disk, towers[2], towers[1]);
+        System.out.println("Destination tower has disks:"+towers[2].printDisks());
+    }
 }

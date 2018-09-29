@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetcode;
+package com.alg.leetup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
  */
 public class PathSum {
  
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public static boolean hasPathSum(TreeNode root, int sum) {
       if(root==null){
             return false;
         }
@@ -42,7 +42,7 @@ public class PathSum {
         return performDFS(root, sumSoFar, sum);
     }
     
-    boolean performDFS(TreeNode root, int sumSoFar,int sum) {
+    public static boolean performDFS(TreeNode root, int sumSoFar,int sum) {
        
         if (root.left == null && root.right == null) {
             if ((sumSoFar+root.val) == sum){
@@ -62,4 +62,15 @@ public class PathSum {
         
         return rightValid;
     }
+    
+    public static void main(String [] args){
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(8);
+        root.right.left = new TreeNode(2);
+        root.right.right = new TreeNode(6);
+        System.out.println(hasPathSum(root, 12));
+	}
 }

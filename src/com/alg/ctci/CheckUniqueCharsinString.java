@@ -27,10 +27,14 @@ public class CheckUniqueCharsinString {
 	 * can use an array of boolean values and whenever a character is
 	 * encountered, set it's index to true. If it has already been set
 	 * then it is duplicate. This will work in O(n) time.
+         * 
+         * 
 	 * Approach2: we can just use the divide and conquer approach till we reach
 	 * the base case of subarray with size 2. Then we merge and check if the two
 	 * subarrays being merged have duplicate values or not. This will take O(nlogn) 
 	 * time, similar to that of the merge sort.
+         * 
+         * 
 	 * @param s
 	 * @return
 	 */

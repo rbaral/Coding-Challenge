@@ -14,7 +14,7 @@ peek
 public class MyQueue{
 	
 	static Stack s1, s2;
-	
+	/*
 	MyQueue(){
 		s1 = new Stack();
 		s2 = new Stack();
@@ -41,4 +41,5 @@ public class MyQueue{
 	public static void main(String args[]){
 		
 	}
+*/
 }

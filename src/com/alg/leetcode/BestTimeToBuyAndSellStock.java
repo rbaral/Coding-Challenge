@@ -3,7 +3,7 @@
  * If you were only permitted to complete at most one transaction (ie, buy one and sell one 
  * share of the stock), design an algorithm to find the maximum profit.
  */
-package com.alg.leetcode;
+package com.alg.leetup;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,10 +55,29 @@ public class BestTimeToBuyAndSellStock {
             prices = new int[]{1, 3};
             prices = new int[] {2, 5, 3, 1, 7};
             //prices = new int[]{-1, -2, -3, -2, -4};
+            //prices = new int[]{7, 1, 5, 3, 6, 4};
             System.out.println(maxProfit(prices));
+            System.out.println(maxSum(prices));
         }
     }
 
+    //Verified in LeetCode and is better than the merge sort
+    static int maxSum(int [] a){
+        a= getPriceChangeArray(a);
+        int maxSoFar = 0;
+        int maxEndingHere = 0;
+        for(int i=0;i<a.length;i++){
+            maxEndingHere = maxEndingHere + a[i];
+            if(maxEndingHere < 0){
+                maxEndingHere = 0;
+            }
+            if(maxSoFar < maxEndingHere){
+                maxSoFar = maxEndingHere;
+            }
+        }
+        return maxSoFar;
+    }
+    
     /**
      * find the difference in stock price for the consecutive days
      *

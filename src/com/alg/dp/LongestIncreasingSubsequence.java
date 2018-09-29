@@ -1,5 +1,6 @@
 /*
-Given a sequence of N numbers – A[1] , A[2] , …, A[N] . Find the length of the longest non-decreasing sequence
+Given a sequence of N numbers – A[1] , A[2] , …, A[N] . 
+Find the length of the longest non-decreasing sequence
 
 
 Solution:
@@ -28,7 +29,7 @@ public class LongestIncreasingSubsequence {
         }
         for(int i=0; i<max.length; i++){
             for(int j = 0; j<i; j++){
-                if(arr[j]<=arr[i] && max[i]< max[j]+1){
+                if(arr[j]<=arr[i]){// && max[i]< max[j]+1){
                     max[i] = max[j]+1;
                 }
             }
@@ -43,7 +44,7 @@ public class LongestIncreasingSubsequence {
     }
     
     public static void main(String args[]){
-        int[] arr = {5, 3, 4, 8, 6, 7};
+        int[] arr = {1, 5, 3, 4, 8, 6, 7};
         int maxLength = findMaxLengthSequence(arr);
         System.out.println("max length for "+Arrays.toString(arr)+" is:"+maxLength);
     }

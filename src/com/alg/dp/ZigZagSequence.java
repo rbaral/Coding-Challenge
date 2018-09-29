@@ -1,9 +1,18 @@
 /*
-A sequence of numbers is called a zig-zag sequence if the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with fewer than two elements is trivially a zig-zag sequence.
+A sequence of numbers is called a zig-zag sequence if the differences between successive 
+numbers strictly alternate between positive and negative. 
+The first difference (if one exists) may be either positive or negative. 
+A sequence with fewer than two elements is trivially a zig-zag sequence.
 
-For example, 1,7,4,9,2,5 is a zig-zag sequence because the differences (6,-3,5,-7,3) are alternately positive and negative. In contrast, 1,4,7,2,5 and 1,7,4,5,5 are not zig-zag sequences, the first because its first two differences are positive and the second because its last difference is zero.
+For example, 1,7,4,9,2,5 is a zig-zag sequence because the differences (6,-3,5,-7,3) are 
+alternately positive and negative. 
+In contrast, 1,4,7,2,5 and 1,7,4,5,5 are not zig-zag sequences, the first because its 
+first two differences are positive and 
+the second because its last difference is zero.
 
-Given a sequence of integers, sequence, return the length of the longest subsequence of sequence that is a zig-zag sequence. A subsequence is obtained by deleting some number of elements (possibly zero) from the original sequence, leaving the remaining elements in their original order.
+Given a sequence of integers, sequence, return the length of the longest subsequence of 
+sequence that is a zig-zag sequence. A subsequence is obtained by deleting some number of elements (
+possibly zero) from the original sequence, leaving the remaining elements in their original order.
 
  
 Definition
@@ -59,5 +68,34 @@ package com.alg.dp;
  * @author rbaral
  */
 public class ZigZagSequence {
+    //this is called as wiggle sort, where the items alternatively form increasing, decreasing or decreasing
+    //and then increasing order
     
+    public static int getWiggleLength(int[] arr){
+        int maxLength = 1;
+        int j = 0;
+        //we check if the items form increasing or decreasing order
+        for(int i=1;i<arr.length; i++){
+            if(arr[i]<arr[j]){//it is decreasing order
+                maxLength++;
+                //skip the elements that do not satisfiy the order
+                while(i<arr.length-1 && arr[i]>=arr[i+1]){
+                    i++;
+                }
+            }else if(arr[i]>arr[j]){//it is increasing order
+                //skip the elements that do not satisfiy the order
+                maxLength++;
+                while(i<arr.length-1 && arr[i]<=arr[i+1]){
+                    i++;
+                }
+            }
+            j = i-1;
+        }
+        return maxLength;
+    }
+    
+    public static void main(String args[]){
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        System.out.println("wiggle length is:"+getWiggleLength(arr));
+    }
 }

@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetcode;
+package com.alg.leetup;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
@@ -51,12 +54,34 @@ public class FirstUniqueCharacterInString {
         return -1;
     }
     
+    //just single pass is allowed
+    //scan from the last character and keep on adding to the hash
+    //remove if it's duplicate is found
+    //the one that is added at last will be the first unique one
+    public static int firstUniqCharSinglePass(String s){
+        int uniqueIndex = -1;
+        Map<Character,Integer> charsCount = new HashMap<Character,Integer>();
+        for(int i=s.length()-1;i>=0;i--){
+            if(!charsCount.containsKey(s.charAt(i))){
+                //the char not found so far
+                charsCount.put(s.charAt(i), 0);
+                uniqueIndex = i;
+            }
+            charsCount.put(s.charAt(i),charsCount.get(s.charAt(i))+1);
+            //if the index at this position is not unique move it to last
+            
+        }
+        return uniqueIndex;
+    }
+    
     public static void main(String args[]){
         String s = "leetcode";
-        System.out.println(firstUniqChar(s));
+        //System.out.println(firstUniqChar(s));
         s = "loveleetcode";
-        System.out.println(firstUniqChar(s));
+        //System.out.println(firstUniqChar(s));
         s= "";
-        System.out.println(firstUniqChar(s));
+        //System.out.println(firstUniqChar(s));
+        s = "leetcodel";
+        System.out.println(firstUniqCharSinglePass(s));
     }
 }

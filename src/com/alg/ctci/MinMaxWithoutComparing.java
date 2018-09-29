@@ -28,9 +28,19 @@ public class MinMaxWithoutComparing {
     }
     static int max(int x, int y){
         int z = (x-y);
-        int i = (z>>31) & 0x1;
-       return x-i*z;
+        int i = (z>>31) & 0x1;//get the sign bit, if z was positive it will be 0 else it will be 1
+        return x-i*z;
     }
+    
+    static int min(int x, int y)
+    {
+        //return  y + ((x - y) & ((x - y) >>(31)));
+        int z = (x-y);
+        int i = (z>>31) & z;//get the sign bit, if z was positive it will be 0 else it will be 1
+        return y+i;
+        
+    }
+
     
     public static void main(String args[]){
         int a =5, b= 10;
@@ -39,6 +49,8 @@ public class MinMaxWithoutComparing {
         System.out.println("max "+max(-2,-15)); //both negative
         System.out.println("max "+max(5,-10));//first positive second negative
         System.out.println("max "+max(-5,10));//first negative second positive
+        
+        System.out.println("min "+min(-10,-3));//first negative second positive
         
     }
 }

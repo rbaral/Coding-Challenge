@@ -1,4 +1,4 @@
-package com.alg.leetcode;
+package com.alg.leetup;
 
 /**
  * 
@@ -7,8 +7,8 @@ package com.alg.leetcode;
  *
  */
 public class ListNode {
-	int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
     String stringVal="";
     ListNode(int x) { val = x;
     	stringVal=String.valueOf(val)+toString();
@@ -37,4 +37,8 @@ public class ListNode {
 	public String getStringVal() {
 		return toString();
 	}
+        
+        public int getVal(){
+            return val;
+        }
 }

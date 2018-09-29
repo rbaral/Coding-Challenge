@@ -19,6 +19,8 @@ import java.util.List;
  * Output: [(2,6), (7,21)]
  * Reason: (3,5) is subarray of (2,6) and (20,21) is subarray of (7,21)
  * 
+ * NOTE: the following implementation works only if the tuples are sorted (i.e. tuple_i.begin<=tuple_(i+1).begin....)
+ * 
  * @author rbaral
  */
 public class OptimizedArrayFromRange {

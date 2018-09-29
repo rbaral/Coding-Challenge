@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.dp;
+package com.alg.realtest;
+
+import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  *
  * @author rbaral
  */
-public class Knapsack {
+public class Test {
     
+    public static void main(String args[]){
+        System.out.println("abcd".substring(1));
+    }
 }

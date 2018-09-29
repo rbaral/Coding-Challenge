@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetcode;
+package com.alg.leetup;
 
 /**
  *Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
@@ -17,7 +17,10 @@ Could you do it without any loop/recursion in O(1) runtime?
 * 
 * Ref: https://en.wikipedia.org/wiki/Digital_root
 * 
-* It helps to see the digital root of a positive integer as the position it holds with respect to the largest multiple of 9 less than the number itself. For example, the digital root of 11 is 2, which means that 11 is the second number after 9. Likewise, the digital root of 2035 is 1, which means that 2035 − 1 is a multiple of 9. If a number produces a digital root of exactly 9, then the number is a multiple of 9.
+* It helps to see the digital root of a positive integer as the position it holds with respect to the largest 
+* multiple of 9 less than the number itself. For example, the digital root of 11 is 2, which means that 11 
+* is the second number after 9. Likewise, the digital root of 2035 is 1, which means that 2035 − 1 is a multiple of 9. 
+* If a number produces a digital root of exactly 9, then the number is a multiple of 9.
 With this in mind the digital root of a positive integer n may be defined by using floor function as
  dr(n)=n-9*( {n-1}/{9}).
 * 

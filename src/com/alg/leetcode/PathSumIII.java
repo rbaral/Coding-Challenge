@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.alg.leetcode;
+package com.alg.leetup;
 
 /**
  *
@@ -52,6 +52,6 @@ Return 3. The paths that sum to 8 are:
  */
 public class PathSumIII {
     public int pathSum(TreeNode root, int sum) {
-        
+        return 0;
     }
 }

@@ -6,13 +6,13 @@ class representing a linked list
 */
 public class LinkedListNode{
 	//lets say we have just int values for this node
-	int data;
+	public int data;
 	//lets create a next node
-	LinkedListNode nextNode = null;
+	public LinkedListNode nextNode = null;
         //previous node
-        LinkedListNode prevNode = null;
+        public LinkedListNode prevNode = null;
         //the last node
-        LinkedListNode lastNode = null;
+        public LinkedListNode lastNode = null;
         
 	
 	public LinkedListNode(int d){

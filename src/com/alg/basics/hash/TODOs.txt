@@ -1,0 +1,4 @@
+Implement HashTable on your own
+Implement HashMap, HashTree on your own (or distinguish on the previous implementation of HashTable)
+
+REf: http://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/

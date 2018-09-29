@@ -55,7 +55,7 @@ public class SinglyLinkedList{
 				currentNode = currentNode.nextNode; //advance the pointer
 			}
 			//the data d was not found, so return the default headNode
-			return head
+			return headNode;
 		}
 	}
 }

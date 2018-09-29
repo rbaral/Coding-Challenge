@@ -29,6 +29,9 @@ public class StringPermutations {
         if(a.length()==0){ //a blank string
             perms.add("");
             return perms;
+        }else if(a.length()==1){
+            perms.add(""+a.charAt(0));
+            return perms;
         }
         
         //now iterate character by character and add the new character
@@ -54,7 +57,7 @@ public class StringPermutations {
     }
     
     public static void main(String args[]){
-        ArrayList<String> list = getPermutations("abcde");
+        ArrayList<String> list = getPermutations("abc");
         System.out.println("There are " + list.size() + " permutations.");
         for (String s : list) {
                 System.out.println(s);

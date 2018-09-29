@@ -108,8 +108,8 @@ public class EditDistance {
     }
 
     public static void main(String args[]) {
-        String str1 = "sunday";
-        String str2 = "saturday";
+        String str1 = "ocurrance";//sunday";
+        String str2 = "occurrence";//saturday";
         int lengthBottomUp = getEditDistanceBottomUp(str1, str2);
         System.out.println("edit distance bottom up:" + lengthBottomUp);
 		Map<String, Integer> distMap = new HashMap<String, Integer>();

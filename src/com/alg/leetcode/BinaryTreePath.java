@@ -14,20 +14,22 @@ import java.util.List;
  *
  * For example, given the following binary tree:
  *
- * 1
+ *  1
  * / \
- * 2 3
+ * 2  3
  * \
- * 5
+ *  5
  * All root-to-leaf paths are:
  *
  * ["1->2->5", "1->3"]
  *
  *
- * Solution 1: 1)start from the root node and traverse down its child 2)take one
- * branch at a time for every traversed node and add the value of the node to
- * the path string 3)when the next child node (on left side or right side) is
- * null, the string is complete
+ * Solution 1: 
+ * 1)start from the root node and traverse down its child 
+ * 2)take one branch at a time for every traversed node and add the value of the node to
+ * the path string 
+ * 3)when the next child node (on left side and right side) is null, the string is complete,
+ * else we just keep on appending the value of this node to the current path
  *
  *
  * @author rbaral
