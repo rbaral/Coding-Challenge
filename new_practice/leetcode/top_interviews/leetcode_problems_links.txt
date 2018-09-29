@@ -1,0 +1,49 @@
+https://leetcode.com/problemset/top-interview-questions/
+
+https://leetcode.com/problems/contains-duplicate/description/
+
+https://leetcode.com/problems/contains-duplicate-iii/description/
+
+https://leetcode.com/problems/reverse-linked-list-ii/description/
+
+
+https://www.bachpan.com/sanskrit-Girl-Names-R.aspx?page=3
+
+
+https://leetcode.com/problems/reverse-linked-list-ii/discuss/30667/Easy-understanding-java-solution
+
+ListNode tempNode = null;
+		ListNode node1Head = node1;//to keep track of the header of node1 so that we can return the pointer to header
+		
+		if(node1.val<=node2.val){
+				node1 = node1.next;
+			}
+		else{
+			//add the node from list2 into list1
+			tempNode = node2;
+			node2 = node2.next;
+			tempNode.next = node1.next;
+			node1.next = tempNode;
+		}
+			
+		while(node1.next!=null && node2.next!=null){
+			if(node1.next.val<=node2.next.val){
+				node1 = node1.next;
+			}else{
+				//add the node from list2 into list1
+				tempNode = node2;
+				node2 = node2.next;
+				tempNode.next = node1.next;
+				node1.next = tempNode;
+			}
+		}
+		if(node1.next==null){
+			//if node1 is smaller then append node2 add the end of node1, else append node2's head before the last node of node1
+			i(node1.val<=node2){
+				node1.next = node2;
+			}else{
+				
+			}
+		}else{
+			
+		}
