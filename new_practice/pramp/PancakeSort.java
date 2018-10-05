@@ -78,6 +78,7 @@ public class PancakeSort{
 	
 	public static void main(String[] args){
 		int[] arr = new int[]{1,5,4,3,2, 0};
+		arr = new int[]{2,3,6,-1,4};
 		System.out.println("before the array is:"+Arrays.toString(arr));
 		//flip(arr, 5);
 		//System.out.println("Flipped array is:"+Arrays.toString(arr));

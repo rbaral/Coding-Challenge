@@ -58,6 +58,38 @@ public class SmallestSubstringFromChars{
 		if(arr==null || s==null || s.trim().length()==0 || arr.length>s.length()){
 			return "";
 		}
+		//put the chars and their count in hash
+		HashMap<Character, Integer> charscount = new HashMap<Character, Integer>();
+		for(char c:arr){
+			charscount.putIfAbsent(c, 0);
+			charscount.get(c)++;
+		}
+		//now iterate through the given string to check if the corresponding characters are found
+		int curLeft = 0, minLeft = 0; //to define the window
+		int minLen = s.length()+1; //assume this is the length of the min window
+		int count = 0;//the count of characters found in the given string
+		for(int curRight = 0;curRight<s.length(); curRight++){
+			char curchar = s.charAt(curRight);
+			if(charscount.containsKey(curchar)){
+				charscount.put(curchar, charscount.get(curchar)-1);
+				if(charscount.get(curchar)>=0){
+					count++;//this many characters from char array are found in the given string
+				}
+			}
+			//check if the window length is reached
+			while(count==arr.length){
+				//if the current window is minimum window
+				if(curRight - curLeft + 1<minLen){
+					minLen = curRight - curLeft + 1;
+					minLeft = curLeft;
+				}
+				char leftchar = s.charAt(curLeft);
+				if(charscount.containsKey(leftchar)){
+					charscount.put(leftchar, );
+				}
+			}
+		}
+		
 		return "";
 	}
 

@@ -5,5 +5,21 @@ Given a node n in a binary search tree, explain and code the most efficient way 
 */
 
 public class  BSTInorderSuccessor{
-
+	
+	/**
+	Method1
+	-find inorder successor string
+	-scan the string to identify the inorder successor
+	*/
+	public static TreeNode inordersuccessor1(TreeNode node){
+		return null;
+	}
+	
+	public static TreeNode inordersuccessor2(TreeNode node){
+		return null;
+	}
+	
+	public static void main(String[] args){
+		
+	}
 }
