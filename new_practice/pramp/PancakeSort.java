@@ -54,11 +54,11 @@ public class PancakeSort{
 	*/
 	public static int[] pancakeSort(int[] arr){
 		
-		for(int arrsize=arr.length; arrsize>1; arrsize--){
+		for(int arrsize=arr.length-1; arrsize>1; arrsize--){
 			int maxindex = findLargestInArray(arr, 0, arrsize);
 			flip(arr, maxindex);
-			//low++;
-			flip(arr, arrsize-1);
+			
+			flip(arr, arrsize);
 			System.out.println("after a flip:"+Arrays.toString(arr));
 		}
 		return arr;

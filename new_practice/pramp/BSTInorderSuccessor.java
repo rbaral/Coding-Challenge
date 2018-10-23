@@ -15,6 +15,9 @@ public class  BSTInorderSuccessor{
 		return null;
 	}
 	
+	/**
+	-use the parent link
+	*/
 	public static TreeNode inordersuccessor2(TreeNode node){
 		return null;
 	}

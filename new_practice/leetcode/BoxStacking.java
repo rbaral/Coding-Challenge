@@ -36,7 +36,7 @@ class Box{
 	}
 	
 	public String toString() {
-		return "Box(" + width + "," + height + "," + height + ")";
+		return "Box(" + length + "," + width + "," + height + ")";
 	}
 }
 public class BoxStacking{
@@ -58,7 +58,6 @@ public class BoxStacking{
 				if(newheight>maxheight){
 					maxheight = newheight;
 					maxstack = newstack;
-					boxmap.put(bottom, newstack);
 				}
 			}
 		}
@@ -68,6 +67,7 @@ public class BoxStacking{
 		if(bottom!=null){
 			maxstack.add(0, bottom);
 		}
+		boxmap.put(bottom, maxstack);
 		return maxstack;
 	}
 
@@ -80,7 +80,7 @@ public class BoxStacking{
 	}
 	
 	public static void main(String[] args) {
-		Box[] boxes = { new Box(3, 4, 1), new Box(8, 6, 2), new Box(7, 8, 3)};
+		Box[] boxes = { new Box(3, 4, 1), new Box(8, 6, 2), new Box(7, 8, 3), new Box(1,1,0)};
 
 		List<Box> stack = createStackDP(boxes, null, new HashMap<Box, List<Box>>());
 		//ArrayList<Box> stack = createStackR(boxes, null);		
