@@ -1,4 +1,4 @@
-# Data Structres and Algorithms Problems and Solutions
+# Data Structres and Algorithms Interview Problems and Solutions
 
 Collection of hundreds of Data Structure and Algorithms Problems and solutions from different sources, including leetcode.com, hackerrank.com, pramp, Cracking The Coding Interview, Glassdoor, and real-world interviews from top-tier tech companies including Amazon, Facebook, Google, LinkedIn, Twitter, Microsoft.
 
